@@ -31,6 +31,8 @@ Cypress.Commands.add(
       return cy.request({
         method: methodName,
         url: urlToWork,
+        form: true,
+        failOnStatusCode: false,
         body: payload,
         headers: {
           accept: "application/json",
@@ -56,4 +58,11 @@ Cypress.Commands.add(
     }
   }
 );
+
+
+Cypress.Commands.add("getAllKeysOfObject", () => {
+  for (const [key] of Object.entries(response.body)) {
+    cy.log(`${key}`);
+  }
+})
 

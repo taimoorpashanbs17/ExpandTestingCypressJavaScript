@@ -1,0 +1,5 @@
+{
+    "incomplete_user_name": "User name must be between 4 and 30 characters",
+    "without_email": "A valid email address is required",
+    "incomplete_password": "Password must be between 6 and 30 characters"
+}

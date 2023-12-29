@@ -4,7 +4,7 @@ import HealthEndPoint from "../../endpoints/health-end-point";
 let healthEndPoint = new HealthEndPoint();
 
 
-describe("Notes Health API", () => {
+describe("Notes - Health API", () => {
     it("Verify Status Code", () => {
         healthEndPoint.verifySuccessStatusCode()
     })

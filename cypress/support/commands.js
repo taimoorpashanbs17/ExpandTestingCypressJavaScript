@@ -59,10 +59,8 @@ Cypress.Commands.add(
   }
 );
 
-
 Cypress.Commands.add("getAllKeysOfObject", () => {
   for (const [key] of Object.entries(response.body)) {
     cy.log(`${key}`);
   }
-})
-
+});

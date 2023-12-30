@@ -36,36 +36,69 @@ describe("Notes - Users Registration API", () => {
 
   it("Register User with Existing Email", () => {
     userEndPoint.verifyUserRegistersWithExistingEmail(
-        registeredUserInfo.name,
-        registeredUserInfo.email,
-        registeredUserInfo.password
+      registeredUserInfo.name,
+      registeredUserInfo.email,
+      registeredUserInfo.password
     );
   });
 
   it("Register User without entering 'Email' Address", () => {
     userEndPoint.verifyUserRegistersWithMissingOneParameter(
-        registeredUserInfo.name,
-        "",
-        registeredUserInfo.password,
-        messages.without_email
+      registeredUserInfo.name,
+      "",
+      registeredUserInfo.password,
+      messages.without_email
     );
   });
 
   it("Register User without entering 'Password'", () => {
     userEndPoint.verifyUserRegistersWithMissingOneParameter(
-        registeredUserInfo.name,
-        registeredUserInfo.email,
-        "",
-        messages.incomplete_password
+      registeredUserInfo.name,
+      registeredUserInfo.email,
+      "",
+      messages.incomplete_password
     );
   });
 
   it("Register User without entering 'Username'", () => {
     userEndPoint.verifyUserRegistersWithMissingOneParameter(
-        "",
-        registeredUserInfo.email,
-        registeredUserInfo.password,
-        messages.incomplete_user_name
+      "",
+      registeredUserInfo.email,
+      registeredUserInfo.password,
+      messages.incomplete_user_name
+    );
+  });
+});
+
+describe("Notes - User Login API", () => {
+  it("Login User with Valid Credentials", () => {
+    userEndPoint.verifyUserLoginSuccessFully(
+      registeredUserInfo.email,
+      registeredUserInfo.password,
+      registeredUserInfo.name
+    );
+  });
+
+  it("Login User with InValid Credentials - i.e. Invalid Email or Password", () => {
+    userEndPoint.verifyUserLoginWithInvalidEmailOrPassword(
+      "taimoor_test122@gmail.com",
+      registeredUserInfo.password
+    );
+  });
+
+  it("Login User without One Parameter - i.e. Email", () => {
+    userEndPoint.verifyUserLoginWithoutEmailOrPassword(
+      "",
+      registeredUserInfo.password,
+      messages.without_email
+    );
+  });
+
+  it("Login User without One Parameter - i.e. Password", () => {
+    userEndPoint.verifyUserLoginWithoutEmailOrPassword(
+      registeredUserInfo.email,
+      "",
+      messages.incomplete_password
     );
   });
 });

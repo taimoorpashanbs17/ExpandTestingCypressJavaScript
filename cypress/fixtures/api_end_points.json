@@ -1,4 +1,5 @@
 {
     "health": "/api/health-check",
-    "register_user" : "/api/users/register"
+    "register_user" : "/api/users/register",
+    "login_user": "/api/users/login"
 }

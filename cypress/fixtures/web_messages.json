@@ -1,0 +1,5 @@
+{
+    "user_registered": "User account created successfully",
+    "already_exist_user": "An account already exists with the same email address",
+    "incorrect_information": "Incorrect email address or password"
+}

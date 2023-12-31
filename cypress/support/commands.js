@@ -64,3 +64,21 @@ Cypress.Commands.add("getAllKeysOfObject", () => {
     cy.log(`${key}`);
   }
 });
+
+Cypress.Commands.add("addContext", (context) => {
+  cy.log(context);
+  cy.once("test:after:run", (test) =>
+    addContext({ test }, new Date().toLocaleString() + " - " + context)
+  );
+});
+
+Cypress.Commands.add("verifyText", (element, textToVerify) => {
+  element.then(function (e) {
+    const t = e.text();
+    expect(t).to.contains(textToVerify);
+  });
+});
+
+Cypress.Commands.add("verifyURL", (urlToBeExpected) => {
+  cy.url().should("eq", urlToBeExpected);
+});

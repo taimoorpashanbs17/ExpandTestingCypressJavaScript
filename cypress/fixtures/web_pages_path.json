@@ -1,0 +1,5 @@
+{
+    "home_page": "/app",
+    "login_page": "/app/login",
+    "register_page": "/app/register"
+}

@@ -1,5 +1,9 @@
 {
     "user_registered": "User account created successfully",
     "already_exist_user": "An account already exists with the same email address",
-    "incorrect_information": "Incorrect email address or password"
+    "incorrect_information": "Incorrect email address or password",
+    "no_notes_all_categories": "You don't have any notes in all categories",
+    "no_notes_home": "You don't have any notes in the home category",
+    "no_notes_work": "You don't have any notes in the work category",
+    "no_notes_personal" : "You don't have any notes in the personal category"
 }

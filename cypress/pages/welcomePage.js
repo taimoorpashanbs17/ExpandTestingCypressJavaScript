@@ -28,7 +28,7 @@ class WelcomePage{
     }
 
     clickOnLoginButton(){
-        this.loginButton().click()
+        this.loginButton().click({ multiple: true })
         cy.addContext("Clicked on 'Login' Button")
     }
 

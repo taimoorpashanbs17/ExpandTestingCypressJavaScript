@@ -49,6 +49,8 @@ describe("Notes - Register User Web", () => {
     loginUserPage.enterPasswordOnPasswordLoginField(userInformation.password)
     loginUserPage.clickOnLoginButton()
     homePage.verifyHomePageURL(webPages.home_page)
+    homePage.clickOnLogoutButton()
+    welcomePage.verifyWelcomePageURL(webPages.home_page)
   });
 
 

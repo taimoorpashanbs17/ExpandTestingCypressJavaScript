@@ -1,5 +1,9 @@
 {
-    "incomplete_user_name": "User name must be between 4 and 30 characters",
-    "without_email": "A valid email address is required",
-    "incomplete_password": "Password must be between 6 and 30 characters"
+  "incomplete_user_name": "User name must be between 4 and 30 characters",
+  "without_email": "A valid email address is required",
+  "incomplete_password": "Password must be between 6 and 30 characters",
+  "title_missing": "Title must be between 4 and 100 characters",
+  "description_missing": "Description must be between 4 and 1000 characters",
+  "category_missing": "Category must be one of the categories: Home, Work, Personal",
+  "no_auth_token": "No authentication token specified in x-auth-token header"
 }

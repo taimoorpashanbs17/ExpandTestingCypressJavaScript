@@ -1,5 +1,3 @@
-const schema = require("carthage/core/my/schema");
-
 class Health {
   schema = {
     $schema: "http://json-schema.org/draft-07/schema#",

@@ -1,0 +1,6 @@
+{
+    "home" : "background-color: rgba(40, 46, 41, 0.6); color: rgb(255, 255, 255);",
+    "work": "background-color: rgb(92, 107, 192); color: rgb(255, 255, 255);", 
+    "personal": "background-color: rgb(50, 140, 160); color: rgb(255, 255, 255);"
+
+}

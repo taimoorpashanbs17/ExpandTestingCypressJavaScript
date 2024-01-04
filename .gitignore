@@ -2,6 +2,4 @@ cypress/e2e/pract.spec.js
 cypress/fixtures/user_information.json
 cypress/fixtures/registered_user_information.json
 node_modules
-mochawesome-report/
 cypress/results/
-mochawesome.json
